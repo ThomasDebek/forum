@@ -4,15 +4,6 @@
   %h1= @post.title
   %p= @post.content
 
-  #comments
-    %h2
-      = @post.comments.count
-      Comments
-    = render @post.comments
-
-    %h3 Reply to thread
-    = render "comments/form"
-
   %br/
   %hr/
   %br/
