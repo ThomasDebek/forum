@@ -1,0 +1,8 @@
+.comment.clearfix
+  .content
+    %p.comment_content= @comment.comment
+    %p.comment_author= @comment.user.email
+  .buttons
+    = link_to 'Back', @comment.post
+    = link_to "Edit", edit_post_comment_path
+    = link_to "Delete", [@comment.post, @comment], method: :delete, data: { confirm: "Are you sure?" }
